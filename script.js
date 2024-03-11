@@ -11,32 +11,24 @@ buttons.forEach(button => {
     button.addEventListener('click', updateDisplay)
 })
 
+
 function updateDisplay(e) {
     let pressedButton = e.target;
     const buttonValue = pressedButton.getAttribute('data-value').toString();
 
-    if (firstOperand){
-        display.textContent = '';
-        displayValue = '';
-        displayValue += buttonValue;
-        display.textContent = displayValue;
 
-    }
-    else {
     displayValue += buttonValue;
     display.textContent = displayValue;
-}
 
-    // console.log(displayValue);
 }
 
 
 
 //calculations 
 
-let firstOperand;
-let secondOperand;
-let currentOperator;
+let firstOperand = null;
+let secondOperand = null;
+let currentOperator = null;
 let operatorButtons = document.querySelectorAll('.operator');
 let equalsBtn = document.getElementById('equals');
 
@@ -58,12 +50,12 @@ function handleOperators(e) {
     } else {
        
      
-            firstOperand = parseFloat(displayValue);
+    firstOperand = parseFloat(displayValue);
            
 
         currentOperator = clickedOperator;
-        // displayValue = '';
-        // display.textContent = displayValue;
+        displayValue = '';
+        display.textContent = displayValue;
        
         // console.log(firstOperand);
     }
@@ -92,8 +84,13 @@ function calculate(){
             result = displayValue;
             break;
         case '/':
+            if (secondOperand === 0){
+                displayValue = "srsly bro"
+                result = displayValue;
+            } else {
             displayValue = firstOperand / secondOperand;
             result = displayValue;
+            }
             break;
         case '%': displayValue = firstOperand % secondOperand;
             result = displayValue;
@@ -117,10 +114,12 @@ function calculate(){
 clearBtn.addEventListener('click', clear);
 
 function clear(){
+displayValue = '';
 display.textContent = '';
 firstOperand = null;
 secondOperand = null;
 currentOperator = null;
+result = null;
 
 }
 
@@ -129,10 +128,3 @@ currentOperator = null;
 
 
 
-  //   if (displayValue.length + buttonValue.length <= maxLength) {
-    //     displayValue += buttonValue;
-    // } else {
-    //     console.log('Maximum length reached.');
-        
-    //     displayValue = displayValue.substring(0, maxLength);
-    // }
