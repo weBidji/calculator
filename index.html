@@ -7,14 +7,9 @@
         content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="style.css">
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Calculator</title>
 </head>
 
@@ -25,41 +20,41 @@
         
         <div id="display"></div>
         <div class="buttons">
-            <div class="button normal">1</div>
-            <div class="button normal">2</div>
+            <div class="button normal" data-value="1">1</div>
+            <div class="button normal" data-value="2">2</div>
             <div class="button normal"
-                id="three">3</div>
-            <div class="button" id="ac">
+                data-value="3">3</div>
+            <div class="button" id="ac" data-value="ac">
                 AC</div>
             <div class="button normal"
-                id="four">4</div>
+                id="four" data-value="4">4</div>
             <div class="button normal"
-                id="five">5</div>
+                id="five" data-value="5">5</div>
             <div class="button normal"
-                id="six">6</div>
+                id="six" data-value="6">6</div>
             <div class="button" id="c">
                 C</div>
             <div class="button normal"
-                id="seven">7</div>
+                id="seven" data-value="7">7</div>
             <div class="button normal"
-                id="eight">8</div>
+                id="eight" data-value="8">8</div>
             <div class="button normal"
-                id="nine">9</div>
+                id="nine" data-value="9">9</div>
+            <div class="button operator"
+                id="percent" data-value="%">%</div>
             <div class="button normal"
-                id="percent">%</div>
-            <div class="button"
-                id="zero">0</div>
-            <div class="button normal" id="dot">.</div>
-            <div class="button normal"
-                id="plus">+</div>
-            <div class="button normal"
-                id="minus">-</div>
+                id="zero" data-value="0">0</div>
+            <div class="button normal" id="dot" data-value=".">.</div>
+            <div class="button operator"
+                id="plus" data-value="+">+</div>
+            <div class="button operator"
+                id="minus operator" data-value="-">-</div>
             <div class="button"
                 id="equals">=</div>
-            <div class="button normal"
-                id="multiply">x</div>
-            <div class="button normal"
-                id="divide">/</div>
+            <div class="button operator"
+                id="multiply" data-value="*">*</div>
+            <div class="button operator"
+                id="divide" data-value="/">/</div>
 
 
         </div>
