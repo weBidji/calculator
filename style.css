@@ -10,7 +10,7 @@ body {
 }
 
 body{
-    /* background:linear-gradient(105deg, rgb(243, 81, 130), rgb(143, 22, 127)); */
+  
     background-color:rgb(136, 105, 88);
 }
 .calculator {
@@ -23,7 +23,7 @@ body{
     border-radius: 15px;
     box-shadow:8px 8px;
     background: linear-gradient(to right, #d40a0ab0, rgb(184, 1, 1));
-    /* background: linear-gradient(110deg, #ebaca2b0, #ce6a6cfa) */
+   
 }
 
 #display {
@@ -40,14 +40,14 @@ body{
     align-items: center;
     justify-content: flex-end;
     font-size: 3rem;
-    padding-right: 10px;
-    
+    padding-right: 10px; 
+    pointer-events:none;
 }
 
-
+/* 
 .display:hover{
     cursor:default;
-}
+} */
 
 .buttons {
     display: grid;
@@ -94,6 +94,7 @@ body{
 
 
 /* color bank */
+
 .pasrapport {
     background-color: darkcyan;
     background-color: rgb(1, 43, 43);
