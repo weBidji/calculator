@@ -11,15 +11,21 @@ buttons.forEach(button => {
     button.addEventListener('click', updateDisplay)
 })
 
-
 function updateDisplay(e) {
     let pressedButton = e.target;
     const buttonValue = pressedButton.getAttribute('data-value').toString();
 
+   
+    if (displayValue.length + buttonValue.length <= maxLength) {
+        displayValue += buttonValue;
+    }
 
-    displayValue += buttonValue;
+   
+    if (displayValue.length > maxLength) {
+        displayValue = displayValue.slice(0, maxLength);
+    }
+
     display.textContent = displayValue;
-
 }
 
 
