@@ -6,6 +6,7 @@ const resultBtn = document.getElementById('equals');
 const display = document.getElementById('display');
 const maxLength = 19;
 
+//add numbers to display
 
 buttons.forEach(button => {
     button.addEventListener('click', updateDisplay)
@@ -29,8 +30,7 @@ function updateDisplay(e) {
 }
 
 
-
-//calculations 
+//calculations
 
 let firstOperand = null;
 let secondOperand = null;
@@ -63,12 +63,10 @@ function handleOperators(e) {
         displayValue = '';
         display.textContent = displayValue;
        
-        // console.log(firstOperand);
+    
     }
 }
 
-
-//calculate
 
 let result;
 
@@ -116,6 +114,8 @@ function calculate(){
 
 
 }
+
+//clear
 
 clearBtn.addEventListener('click', clear);
 
